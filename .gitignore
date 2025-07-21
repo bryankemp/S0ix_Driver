@@ -1,0 +1,45 @@
+# Build artifacts
+build/
+*.o
+*.ko
+*.mod
+*.mod.c
+*.symvers
+*.order
+.*.cmd
+.tmp_versions/
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.generated
+
+# Generated files
+Kbuild
+manage_module.sh
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation build artifacts (handled by docs/.gitignore)
+docs/_build/
+docs/venv/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Kernel module development
+Module.symvers
+modules.order
+.tmp_versions

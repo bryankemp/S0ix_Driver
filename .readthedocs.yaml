@@ -1,0 +1,29 @@
+# ReadtheDocs configuration file for S0ix Driver (C Kernel Module)
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+version: 2
+
+# Set the OS, Python version and other tools you might need
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+  jobs:
+    post_create_environment:
+      # Install any system dependencies needed for documentation
+      - apt-get update
+      - apt-get install -y doxygen graphviz
+
+# Build documentation in the "docs/" directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+# Build your docs in additional formats
+formats:
+  - pdf
+  - epub
+
+# Python requirements for Sphinx and extensions
+python:
+  install:
+    - requirements: docs/requirements.txt
