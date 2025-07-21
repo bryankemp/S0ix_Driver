@@ -22,15 +22,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
-    'breathe',
     'myst_parser',
 ]
-
-# Breathe configuration for Doxygen integration
-breathe_projects = {
-    "S0ix Driver": "_build/doxygen/xml"
-}
-breathe_default_project = "S0ix Driver"
 
 # MyST parser configuration for Markdown support
 myst_enable_extensions = [
